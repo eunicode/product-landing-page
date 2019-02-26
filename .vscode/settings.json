@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "eslint.enable": false,
+  "eslint.autoFixOnSave": false,
+  "prettier.disableLanguages": [""],
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "always"
+}

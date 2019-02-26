@@ -22,5 +22,8 @@
     "gh-pages": "^2.0.1",
     "gulp": "^4.0.0",
     "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "prettier": "1.16.4"
   }
 }
