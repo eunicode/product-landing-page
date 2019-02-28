@@ -34,10 +34,6 @@ Element Styles
   box-sizing: border-box;
 }
 
-main {
-  margin-top: 6em;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -57,6 +53,21 @@ main {
 
 .header__logo {
   width: 5em;
+  padding: 5px 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--green);
+  padding: 0 1em;
+}
+
+main {
+  margin-top: 6em;
+}
+
+section {
+  padding: 3em 0;
 }
 
 #intro {
@@ -86,13 +97,16 @@ footer {
   text-align: center;
   background-color: var(--green);
   color: white;
+  padding: 1em 0;
 }
+
 /*--------------------------------------------------------------
 Basic responsive layout for all browsers:
 --------------------------------------------------------------*/
 
 /* Constrain width, and center body element */
 body {
+  /* 960px */
   max-width: 60em;
   margin: 0 auto;
 }
@@ -118,9 +132,9 @@ CSS Grid layout for modern browsers:
 /* Check for CSS Grid support */
 @supports (grid-area: auto) {
   /* The default/fallback layout is full-bleed for narrow viewports.
-  `max-width` doesn't start kicking in until 60em. */
+  `max-width` constraining doesn't start kicking in until 60em [960px]. */
 
-  /* For viewports 60em and wider, enable grid.
+  /* For viewports 600px and wider, enable grid.
   Constrain widths with grid. */
   /* @media screen and (min-width: 600px) { */
   @media (min-width: 600px) {
@@ -129,14 +143,24 @@ CSS Grid layout for modern browsers:
       max-width: none;
     }
 
+    .constrain-main {
+      max-width: none;
+    }
+
     /* Make each section a grid container.
       Use 4 columns to constrain and center content */
+    header {
+      display: grid;
+      grid-template-columns: 1fr minmax(auto, 35em) minmax(auto, 35em) 1fr;
+    }
+
     main > section {
       display: grid;
       grid-template-columns: 1fr minmax(auto, 35em) minmax(auto, 35em) 1fr;
     }
 
     /* Center and constrain content by placing them in 2 center columns */
+    .header__container,
     .intro__content,
     .features__content,
     .demo__content,
