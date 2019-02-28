@@ -1,86 +1,30 @@
-# Basic Gulp Boilerplate
+# Product Landing Page
 
 ## Description
 
-This is a bare bones starting point for creating quick, simple web projects with vanilla CSS and JavaScript. It is a local development alternative to CodePen.
+This website is a product landing page for a Chrome extension created by the Turtles 11 team in the _Chingu Voyage 2_ cohort.
+
+This product landing page is a project required for freeCodeCamp's _[Responsive Web Design](https://learn.freecodecamp.org/)_ certificate. It fulfills the user stories listed [here](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page/).
+
+## Demo
+
+https://eunicode.github.io/product-landing-page/
 
 ## Features
 
-- Live reloading with Browsersync
+- Fixed navigation bar
+- Client-side form validation with HTML5
+- Aligned, centered width-constrained content with `max-width` and auto-margins, or with Grid, if supported
+- Single-column, mobile-first layout
+- Progressive enhancement with `@supports` rule, Flexbox, and Grid
+- Responsive design with media queries
 
-## Getting started
+## Tech Stack
 
-### Creating a project
+- HTML5
+- CSS3
 
-Change the working directory to the location you want the cloned directory to be made.
-
-```
-cd <path>
-```
-
-Clone the repo with HTTPS URLs.
-
-```
-git clone https://github.com/eunicode/boilerplate-gulp-basic.git <yourNewRepoName>
-```
-
-Or clone with SSH URLs.
-
-```
-git clone git@github.com:eunicode/boilerplate-gulp-basic.git <yourNewRepoName>
-```
-
-Then change directories to your new project.
-
-```
-cd <yourNewRepoName>
-```
-
-And remove the `.git` subdirectory. <br>
-Then re-initialize the directory as a Git repository.
-
-```
-rm -rf .git
-git init
-```
-
-Add/stage the files in your new repo.<br>
-Then commit the files.
-
-```
-git add .
-git commit -m ":tada: First commit"
-```
-
-### Creating a repo on GitHub
-
-Create a new repo on GitHub. To avoid errors, do not initialize the new repo with README, license, or gitignore files.
-
-Copy the remote repo URL, then add the remote to your local repo.
-
-```
-git remote add origin https://github.com/username/yourNewRepoName.git
-```
-
-### Directory structure
-
-```
-yourNewRepoName
-├── README.md
-├── LICENSE
-├── notes.md
-├── node_modules
-├── package.json
-├── .gitignore
-└── app
-    ├── css
-    │   └── style.css
-    ├── js
-    │   └── script.js
-    └── index.html
-```
-
-### Installation
+## Setup
 
 Install dependencies
 
@@ -88,19 +32,17 @@ Install dependencies
 npm install
 ```
 
-### Development
-
-Inside the newly created project, run `gulp` to start the live reloading Browsersync server.
+Run the default `gulp` command to start the live server
 
 ```
 gulp
 ```
 
-### Deploy
+## Lessons Learned
 
-To deploy the project on GitHub Pages, run
-
-```
-npm run deploy
-```
-
+- How to display full-bleed sections with centered, width-constrained content that aligns with other sections' content by applying the same grid to each section to create a "global", aggregate grid
+- How to create a pure HTML form that submits data to a server by using `form`'s `action` attribute and an element with a `type="submit"` attribute (`input`, `button`)
+- When a form is submitted, the data submitted will be a key-value pair derived from the value of the `name` attribute and the `value` attribute. E.g. `subscribe=newsletter`
+- For `input` elements of the type text, the `value` attribute is a DOMString that contains the current value of the text entered into the text field. You can retrieve this using the `HTMLInputElement.value` property in JavaScript.
+- How to require form fields with the `required` attribute
+- The `label` element's `for` attribute and the `input` element's `id` attribute are used to link them together (their values must match).
