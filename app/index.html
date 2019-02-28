@@ -27,58 +27,77 @@
     </header>
 
     <main>
+      <section id="intro">
+        <div class="intro__content">
+          <h1>Turtle Tab</h1>
+          <p>
+            Turtle Tab is a Chrome extension with a minimalist design and
+            additional tools to help you be more productive.
+          </p>
+        </div>
+      </section>
       <section id="features">
-        <h2>Features</h2>
+        <div class="features__content">
+          <h2 class="features__title">Features</h2>
 
-        <p>Turtle Tab features at a glance</p>
-        <ul>
-          <li>Search Google from the homepage</li>
-          <li>See the local weather, or weather at any location</li>
-          <li>Write notes and todo lists</li>
-          <li>See your bookmarks</li>
-          <li>See and clear your history</li>
-          <li>Enable and disable Chrome extensions</li>
-        </ul>
+          <p class="features__text">Turtle Tab features at a glance</p>
+          <ul class="features__list">
+            <li>Search Google from the homepage</li>
+            <li>See the local weather, or weather at any location</li>
+            <li>Write notes and todo lists</li>
+            <li>See your bookmarks</li>
+            <li>See and clear your history</li>
+            <li>Enable and disable Chrome extensions</li>
+          </ul>
+        </div>
       </section>
 
-      <section>
-        <h2>Demo</h2>
-        <iframe
-          id="video"
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/Lp4x_BwPMho"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      <section class="demo">
+        <div class="demo__content">
+          <h2 class="demo__title">Demo</h2>
+          <iframe
+            id="video"
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/Lp4x_BwPMho"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </section>
 
       <section id="install">
-        <h2>Install</h2>
-        <p>Free and open source browser extension</p>
-        <p>Download and install now</p>
-        <button>Install for Chrome</button>
+        <div class="install__content">
+          <h2 class="install__title">Install</h2>
+          <p>Free and open source browser extension</p>
+          <p>Download and install now</p>
+          <button>Install for Chrome</button>
+        </div>
       </section>
 
       <section id="subscribe">
-        <h2>Subscribe to the Turtles Tab newsletter</h2>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-          <label for="email">Enter your email</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-          <input id="submit" type="submit" value="Subscribe" />
-        </form>
-        <p>Your email will never be given to third parties or sent spam.</p>
+        <div class="subscribe__content">
+          <h2 class="subscribe__title">
+            Subscribe to the Turtles Tab newsletter
+          </h2>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <label for="email">Enter your email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input id="submit" type="submit" value="Subscribe" />
+          </form>
+          <p>Your email will never be given to third parties or sent spam.</p>
+        </div>
       </section>
     </main>
 
-    <footer>Coded by eunicode why no autofr</footer>
+    <footer>Coded by eunicode</footer>
 
     <script src="js/script.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
