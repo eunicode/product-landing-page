@@ -1,10 +1,22 @@
 /*--------------------------------------------------------------
+CSS Variables
+--------------------------------------------------------------*/
+
+:root {
+  --red: #f74d5f;
+}
+
+/*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
+
+body {
+  font-family: sans-serif;
+}
 
 /*--------------------------------------------------------------
 Element Styles
@@ -14,11 +26,58 @@ Element Styles
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
+main {
+  margin-top: 6em;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  /* Parent is body */
+  width: 100%;
+  /* background-color: rgb(171, 240, 171); */
+  /* We want header to be full-bleed, while its content to be constrained */
+}
+
+.constrain-main {
+  /* Specify width of header container bc header is out of flow */
+  max-width: 65em;
+  width: 100%;
+}
+
+.header__logo {
+  width: 5em;
 }
 
 /*--------------------------------------------------------------
-Layout / Media Queries
+Basic responsive layout for all browsers:
 --------------------------------------------------------------*/
 
+/* Constrain width, and center body element */
+body {
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+Flexbox layout for modern browsers:
+--------------------------------------------------------------*/
+
+.header__container {
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  /* Alignment of items on cross-axis, default is `stretch` */
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for modern browsers:
+--------------------------------------------------------------*/
+
+/* For widths >= 800px, constrain main content's width */
+@media (min-width: 800px) {
+}

@@ -10,19 +10,75 @@
   </head>
 
   <body>
-    <header id="header">
-      <image id="header-img"></image>
-      <nav class="nav-link">
-        <a href="" class="nav-link"></a>
-        <a href="" class="nav-link"></a>
-      </nav>
+    <header id="header" class="header">
+      <div class="constrain-main header__container">
+        <image
+          id="header-img"
+          class="header__logo"
+          src="http://bestanimations.com/Animals/Reptiles/turtles/cute-turtle-animated-gif-12.gif"
+          alt="turtle-logo"
+        ></image>
+        <nav id="nav-bar" class="header__links">
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#install" class="nav-link">Install</a>
+          <a href="#subscribe" class="nav-link">Subscribe</a>
+        </nav>
+      </div>
     </header>
 
-    <video id="video"></video>
+    <main>
+      <section id="features">
+        <h2>Features</h2>
 
-    <form id="form">
-      <input id="submit">
-    </form>
+        <p>Turtle Tab features at a glance</p>
+        <ul>
+          <li>Search Google from the homepage</li>
+          <li>See the local weather, or weather at any location</li>
+          <li>Write notes and todo lists</li>
+          <li>See your bookmarks</li>
+          <li>See and clear your history</li>
+          <li>Enable and disable Chrome extensions</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Demo</h2>
+        <iframe
+          id="video"
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/Lp4x_BwPMho"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section id="install">
+        <h2>Install</h2>
+        <p>Free and open source browser extension</p>
+        <p>Download and install now</p>
+        <button>Install for Chrome</button>
+      </section>
+
+      <section id="subscribe">
+        <h2>Subscribe to the Turtles Tab newsletter</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <label for="email">Enter your email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input id="submit" type="submit" value="Subscribe" />
+        </form>
+        <p>Your email will never be given to third parties or sent spam.</p>
+      </section>
+    </main>
+
+    <footer>Coded by eunicode why no autofr</footer>
 
     <script src="js/script.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
