@@ -1,0 +1,172 @@
+/*--------------------------------------------------------------
+CSS Variables
+--------------------------------------------------------------*/
+
+:root {
+  --gray-light: #f7f7f7;
+  --green: #00a82d;
+}
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+/*--------------------------------------------------------------
+Element Styles
+--------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  /* Parent is body */
+  width: 100%;
+  /* background-color: rgb(171, 240, 171); */
+  /* We want header to be full-bleed, while its content to be constrained */
+}
+
+/* Fallback rule for browsers w/out Grid support */
+.constrain-main {
+  /* Specify width of header container bc header is out of flow */
+  max-width: 60em;
+  width: 100%;
+}
+
+.header__logo {
+  width: 5em;
+  padding: 5px 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--green);
+  padding: 0 1em;
+}
+
+main {
+  margin-top: 6em;
+}
+
+section {
+  padding: 3em 0;
+}
+
+#intro {
+  background-color: var(--green);
+  color: white;
+}
+
+#features {
+  background-color: var(--gray-light);
+}
+
+#demo {
+  background-color: white;
+}
+
+#install {
+  /* background-color: white; */
+  background-color: var(--gray-light);
+}
+
+#subscribe {
+  background-color: var(--gray-light);
+  background-color: white;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--green);
+  color: white;
+  padding: 1em 0;
+}
+
+/*--------------------------------------------------------------
+Basic responsive layout for all browsers:
+--------------------------------------------------------------*/
+
+/* Constrain width, and center body element */
+body {
+  /* 960px */
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+Flexbox layout for modern browsers:
+--------------------------------------------------------------*/
+
+.header__container {
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  /* Alignment of items on cross-axis, default is `stretch` */
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for modern browsers:
+--------------------------------------------------------------*/
+
+/* Check for CSS Grid support */
+@supports (grid-area: auto) {
+  /* The default/fallback layout is full-bleed for narrow viewports.
+  `max-width` constraining doesn't start kicking in until 60em [960px]. */
+
+  /* For viewports 600px and wider, enable grid.
+  Constrain widths with grid. */
+  /* @media screen and (min-width: 600px) { */
+  @media (min-width: 600px) {
+    /* Disable fallback max-width, center aligned rule */
+    body {
+      max-width: none;
+    }
+
+    .constrain-main {
+      max-width: none;
+    }
+
+    /* Make each section a grid container.
+      Use 4 columns to constrain and center content */
+    header {
+      display: grid;
+      grid-template-columns: 1fr minmax(auto, 35em) minmax(auto, 35em) 1fr;
+    }
+
+    main > section {
+      display: grid;
+      grid-template-columns: 1fr minmax(auto, 35em) minmax(auto, 35em) 1fr;
+    }
+
+    /* Center and constrain content by placing them in 2 center columns */
+    .header__container,
+    .intro__content,
+    .features__content,
+    .demo__content,
+    .install__content,
+    .subscribe__content {
+      grid-column: 2/4;
+    }
+  }
+}
